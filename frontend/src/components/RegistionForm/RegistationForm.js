@@ -70,7 +70,7 @@ export default function RegistrationForm() {
   };
 
   return (
-    <Box sx={{ maxWidth: 600, mx: "auto", mt: 4 }}>
+    <Box sx={{ maxWidth: 600, mx: "auto", my: 4 }}>
       <Paper elevation={3} sx={{ p: 4 }}>
         <Typography variant="h5" gutterBottom>
           <b>Basic-Info</b>
@@ -86,7 +86,7 @@ export default function RegistrationForm() {
               { name: "mobno", label: "Mobile Number" },
               { name: "email", label: "Email", type: "email" },
             ].map(({ name, label, type }) => (
-              <Grid item xs={12} key={name}>
+              <Grid item xs={12} key={name} style={{ width: "100%" }}>
                 <Controller
                   name={name}
                   control={control}
@@ -133,7 +133,7 @@ export default function RegistrationForm() {
                 options: ["Thane", "Mumbai"],
               },
             ].map(({ name, label, options }) => (
-              <Grid item xs={12} key={name}>
+              <Grid item xs={12} key={name} style={{ width: "100%" }}>
                 <Controller
                   name={name}
                   control={control}
@@ -157,7 +157,7 @@ export default function RegistrationForm() {
                 />
               </Grid>
             ))}
-            <Grid item xs={12}>
+            <Grid item xs={12} style={{ width: "100%" }}>
               <Button
                 variant="contained"
                 color="primary"
